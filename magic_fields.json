@@ -1,0 +1,5 @@
+[
+{"field_name" : "src_user_name", "description" : "Stores source user name", "value_type" : "firstname.lastname"},
+{"field_name" : "src_ip", "description" : "Stores source ip address", "value_type" : "IPv4 ip address type"},
+{"field_name" : "hostname", "description" : "Stores hostname", "value_type" : "Alphanumerical string"}
+]
