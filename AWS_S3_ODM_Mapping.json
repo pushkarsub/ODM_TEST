@@ -1,0 +1,359 @@
+{
+"vendor" : "aws",
+"service" : "s3",
+ "description": "Direct s3 logs from aws service",
+ "source": "aws.s3",
+ "version": "0.1",
+ "mapping":[
+ {
+   "source_column": "'AWS'",
+   "transformation_logic": "",
+   "typecast": "",
+   "odm_column": "DVC_PRODUCT",
+   "description": ""
+ },
+ {
+   "source_column": "'Amazon'",
+   "transformation_logic": "",
+   "typecast": "",
+   "odm_column": "DVC_VENDOR",
+   "description": ""
+ },
+ {
+   "source_column": "'*'",
+   "transformation_logic": "",
+   "typecast": "",
+   "odm_column": "DVC_VERSION",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:account",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "ACCOUNT_ID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:arn",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_ARN",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:accountId",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_ID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity",
+   "transformation_logic": "",
+   "typecast": "VARIANT",
+   "odm_column": "SRC_USER_INFO",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:sessionIssuer:arn",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_SESSION_CONTEXT_ISSUER_ACCOUNT_ARN",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:sessionIssuer:accountId",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_SESSION_CONTEXT_ISSUER_ACCOUNT_ID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:sessionIssuer:principalId",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_SESSION_CONTEXT_ISSUER_PRINCIPAL_ID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:sessionIssuer:type",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_SESSION_CONTEXT_ISSUER_TYPE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:sessionIssuer:userName",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_SESSION_CONTEXT_ISSUER_USER_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:principalId",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_SID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:type",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_USER_TYPE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:attributes:mfaAuthenticated",
+   "transformation_logic": "",
+   "typecast": "BOOLEAN",
+   "odm_column": "MFA_SESSION_FLAG",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:sessionContext:attributes:creationDate",
+   "transformation_logic": "",
+   "typecast": "TIMESTAMP",
+   "odm_column": "NEW_USER_SESSION_TIME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:managementEvent",
+   "transformation_logic": "",
+   "typecast": "BOOLEAN",
+   "odm_column": "ADMIN_FLAG",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:\"detail-type\"",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "AWS_DETAIL_TYPE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:eventVersion",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "AWS_EVENT_VERSION",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail",
+   "transformation_logic": "",
+   "typecast": "VARIANT",
+   "odm_column": "DETAIL_INFO",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:source",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "DST_SERVICE_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:recipientAccountId",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "DST_USER_ID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:errorCode",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "ERROR_CODE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:errorMessage",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "ERROR_DESC",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:eventCategory",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "EVENT_CAT_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:eventID",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "EVENT_GUID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:eventName",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "EVENT_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:eventSource",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "EVENT_SERVICE_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:time",
+   "transformation_logic": "",
+   "typecast": "TIMESTAMP",
+   "odm_column": "EVENT_TIME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:eventType",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "EVENT_TYPE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:requestID",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "REQUEST_GUID",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:requestParameters",
+   "transformation_logic": "",
+   "typecast": "VARIANT",
+   "odm_column": "REQUEST_INFO",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:responseElements",
+   "transformation_logic": "",
+   "typecast": "VARIANT",
+   "odm_column": "RESPONSE_INFO",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:readOnly",
+   "transformation_logic": "",
+   "typecast": "BOOLEAN",
+   "odm_column": "READONLY_FLAG",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:region",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "REGION_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:sourceIPAddress",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_IP",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userIdentity:invokedBy",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_SERVICE_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "original_string:\"detail-type\"",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SRC_TYPE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:userAgent",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "USERAGENT",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData",
+   "transformation_logic": "",
+   "typecast": "VARIANT",
+   "odm_column": "ADDN_EVENT_INFO",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData:bytesTransferredIn",
+   "transformation_logic": "",
+   "typecast": "NUMBER",
+   "odm_column": "BYTES_TRNSF_IN",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData:bytesTransferredOut",
+   "transformation_logic": "",
+   "typecast": "NUMBER",
+   "odm_column": "BYTES_TRNSF_OUT",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING",
+   "transformation_logic": "",
+   "typecast": "",
+   "odm_column": "RAW_DATA",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData:AuthenticationMethod",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "AUTHENTICATION_METHOD",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData:CipherSuite",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "CIPHER_SUITE",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData:SSEApplied",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SSE_APPLIED",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:additionalEventData:SignatureVersion",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "SIGNATURE_VERSION",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:requestParameters:Host",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "REQUEST_PARAMS_HOST",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:requestParameters:bucketName",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "REQUEST_BUCKET_NAME",
+   "description": ""
+ },
+ {
+   "source_column": "ORIGINAL_STRING:detail:responseElements:\"x-amz-server-side-encryption\"",
+   "transformation_logic": "",
+   "typecast": "VARCHAR",
+   "odm_column": "ENCRYPTION_SERVER_SIDE",
+   "description": ""
+ }
+]
+}
